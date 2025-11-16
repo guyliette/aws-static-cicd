@@ -34,3 +34,8 @@ jobs:
       - name: Upload files to s3
         run: |
           aws s3 cp . s3://frontend.gigistyle.online/ --recursive
+      - name: Invalidate CloudFront cache
+        uses: chetan/Invalidate-cloudfront-action@v1
+        env:
+           DISTRIBUTION: E1EVE0S4JBXVAJ
+           PATHS: "/*"
