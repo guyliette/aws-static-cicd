@@ -1,7 +1,5 @@
 name: Deploy static files to s3 bucket
 
-name: Deploy to AWS
-
 on:
   push:
     branches:
