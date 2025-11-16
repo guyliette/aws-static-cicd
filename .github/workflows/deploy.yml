@@ -35,7 +35,7 @@ jobs:
         run: |
           aws s3 cp . s3://frontend.gigistyle.online/ --recursive
       - name: Invalidate CloudFront cache
-        uses: chetan/Invalidate-cloudfront-action@v1
+        uses: chetan/Invalidate-cloudfront-action@v2
         env:
            DISTRIBUTION: E2ICXHWZC8XKWU
            PATHS: "/*"
